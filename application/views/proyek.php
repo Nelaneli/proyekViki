@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>Mix Juice</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="<?=base_url(); ?>assets/css/bootstrap.min.css" type="text/css">
@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Mix Juice</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,13 +56,13 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#services">Profil Perusahaan</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll" href="#portfolio">Produk Kami</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Kontak Kami</a>
                     </li>
                 </ul>
             </div>
