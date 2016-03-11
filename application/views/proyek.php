@@ -53,7 +53,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">Home</a>
+                        <a class="page-scroll" href="#home">Home</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#services">Profil Perusahaan</a>
@@ -73,7 +73,7 @@
 
     <header>
         <div class="header-content">
-            <div class="header-content-inner">
+            <div class="header-content-inner" id="home">
                 <h1>Corn Milk, Soybean Milk and Fruit</h1>
                 <hr>
                 <p>Rasakan segala kesegaran dari minuman sehat tanpa bahan pengawet!</p>
@@ -249,7 +249,7 @@
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
+                    <p><a href="mailto:viky_rasputro@yahoo.com">viky_rasputro@yahoo.com</a></p>
                 </div>
             </div>
         </div>
