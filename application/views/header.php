@@ -53,9 +53,9 @@
                     <li>
                         <a href="<?php echo base_url(); ?>index.php/Admin/home"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="<?php echo base_url(); ?>index.php/Admin/comp"><i class="fa fa-fw fa-edit"></i> Info</a>
-                    </li>
+                    </li>-->
                     <li>
                         <a href="<?php echo base_url(); ?>index.php/Admin/form"><i class="fa fa-fw fa-edit"></i> Produk</a>
                     </li>

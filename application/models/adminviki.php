@@ -8,18 +8,20 @@ class Adminviki extends CI_Model {
     }
     
     function produk() {
-        $query = $this->db->get('produk');
+        $query = $this->db->get('produk');  //produk = nama tabel pada database
         return $query->result();
     }
     
-    function tambah_produk($nama, $des, $hrg){
+    function ambil_id() {
+        $query = $this->db->query("SELECT id_produk FROM produk ORDER BY id_produk DESC LIMIT 1");  //produk = nama tabel pada database
+        return $query->result();
+    }
+    
+    function tambah_produk($data){
         $this->db->reconnect();
-        $tambah=$this->db->query("INSERT INTO produk VALUES (NULL, '$nama','$des', $hrg)");
-        
-        if($tambah){
-            return 0;
-        }
-        else    return -1;
+        $this->db->insert('produk',$data);
+       
+        return TRUE;
     }
     function hapus_produk($id)       
     {

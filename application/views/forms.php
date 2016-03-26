@@ -22,6 +22,7 @@
 
                 <div class="row">
                     <div class="col-lg-3">
+                        <?=$this->session->flashdata('pesan')?>
 
                         <form role="form" method="POST" enctype="multipart/form-data" action="<?php echo base_url();?>index.php/Admin/add_produk/" >
 
@@ -31,7 +32,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Foto</label>
-                                <input type="file">
+                                <input type="file" name="filefoto" title="Pilih . . .">
                             </div>
 
                             <div class="form-group">
