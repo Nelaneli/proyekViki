@@ -69,13 +69,45 @@ class Admin extends CI_Controller {
 	}
     public function add_produk(){
         $this->load->model('adminviki');
+        $last=$this->adminviki->ambil_id();
+        $this->load->library('upload');
         $this->load->library('form_validation');
-        $a = $this->input->post('nama');
-        $b = $this->input->post('des');
-        $c = $this->input->post('hrg');
-        $this->adminviki->tambah_produk($a, $b, $c);
-        redirect(site_url('../index.php/admin/form'));
+        foreach ($last as $l ){
+            $nmfile = $l->id_produk;
+        }
+        //$nmfile = "file_".time();
+        $config = array(
+        'upload_path' => "./uploads/",
+        'allowed_types' => "gif|jpg|png|jpeg|bmp",
+        'overwrite' => TRUE,
+        'max_size' => "2048000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
+        'max_height' => "768",
+        'max_width' => "1024",
+        'file_name'=> $nmfile
+        );
+        
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+        if($_FILES['filefoto']['name']){
+            if($this->upload->do_upload('filefoto')){                
+                $gbr=$this->upload->data();
+                $data=array('nama_produk' => $this->input->post('nama'),
+                            'desk_produk' => $this->input->post('des'),
+                            'hrg_produk' => $this->input->post('hrg'),
+                            'gbr_produk'=>$gbr['file_name']);
+            $this->adminviki->tambah_produk($data);
+            $this->session->set_flashdata("pesan","<div class=\"col-md-12\"><div class=\"alert alert-success\" id=\"alert\">Upload gambar berhasil !!</div></div>");
+            redirect(site_url('../index.php/admin/form'));
+//jika berhasil maka akan ditampilkan view vupload
+            }
+            else{
+                $this->session->set_flashdata("pesan","<div class=\"col-md-12\"><div class=\"alert alert-danger\" id=\"alert\">Gagal upload gambar !!</div></div>");
+                redirect(site_url('../index.php/admin/form'));//jika gagal maka akan ditampilkan form upload
+            }  
+        }
     }
+    
+    
     public function delete_produk($id)
 	{
 		$this->load->model('adminviki');
