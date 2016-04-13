@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>Penyisihan Chernival</title>
+	<title>Mix Juice - Admin</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css">

@@ -137,27 +137,42 @@
             </div>
         </div>
     </section>
-
+    
     <section class="no-padding" id="portfolio">
         <div class="container-fluid">
             <div class="row no-gutter">
+<<<<<<< HEAD
                 <?php  foreach ($barang as $b){ ?>
+=======
+                <?php foreach ($p as $produk) { ?>
+>>>>>>> f91c2076962aa436f93cddb87408144aa149e42d
                 <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
                         <img src="<?=base_url(); ?>uploads/<?= $b->gbr_produk?>" class="img-responsive" alt="" width="650px" height="350px">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
+<<<<<<< HEAD
                                     Category
                                 </div>
                                 <div class="project-name">
                                     <?php echo $b->nama_produk; ?>
+=======
+                                    <?php echo $produk->nama_produk; ?>
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+>>>>>>> f91c2076962aa436f93cddb87408144aa149e42d
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
+<<<<<<< HEAD
                 <?php }?>
+=======
+                <?php } ?>
+>>>>>>> f91c2076962aa436f93cddb87408144aa149e42d
             </div>
         </div>
     </section>
